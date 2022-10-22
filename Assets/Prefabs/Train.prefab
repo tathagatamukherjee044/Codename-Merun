@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &536204558690447255
 Transform:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ Transform:
   m_GameObject: {fileID: 536204560133434262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.13, y: -2, z: 0}
-  m_LocalScale: {x: 0.79, y: 0.6794, z: 0.6794}
+  m_LocalScale: {x: 0.58, y: 0.58, z: 0.58}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 536204559557308164}
@@ -295,7 +295,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6b92badc8b067bd4da5cb64f188f0e37, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d72a11a460b8d354a888356803f6dcaf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 495cfd7de3739bc4ba4d614a2faee0b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 2
 --- !u!61 &536204560133434287
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -353,18 +353,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.045982838, y: -0.0141272545}
+  m_Offset: {x: 0.49329758, y: -4.8600426}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 29.36, y: 6.694883}
+    oldSize: {x: 30.567163, y: 20}
     newSize: {x: 29.36, y: 6.694883}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.322956, y: 5.9590445}
+  m_Size: {x: 27.821941, y: 8.941143}
   m_EdgeRadius: 0
 --- !u!233 &-6806399452158324182
 HingeJoint2D:
@@ -380,8 +380,8 @@ HingeJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
-  m_Anchor: {x: -11.154643, y: -2.0657032}
-  m_ConnectedAnchor: {x: -10.422168, y: -3.4034388}
+  m_Anchor: {x: -15.177172, y: -6.289355}
+  m_ConnectedAnchor: {x: -9.932759, y: -5.6478257}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
