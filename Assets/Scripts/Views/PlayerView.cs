@@ -12,7 +12,15 @@ public class PlayerView : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       //rigidbody2D=gameObject.GetComponent<RigidBody2D>(); 
+        Time.timeScale = 0;
+        Invoke("feedDog()", 5);
+        Debug.Log("Game will start after 5 secs");
+
+    }
+    void feedDog()
+    {
+        Debug.Log("Now satrting");
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame

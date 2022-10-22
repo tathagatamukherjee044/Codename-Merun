@@ -23,7 +23,7 @@ public class TrainGeneratorView : MonoBehaviour
     
     private void OnTriggerExit2D(Collider2D other) {
         //Debug.Log("train has left");
-        //Debug.Log(other.gameObject.name);
+        Debug.Log(other.gameObject.transform.position);
         Instantiate(train,new Vector3 (pos, -2, 0), Quaternion.identity);
     }
 

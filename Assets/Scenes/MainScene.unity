@@ -255,7 +255,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &168036273
 Transform:
   m_ObjectHideFlags: 0
@@ -506,7 +506,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 810014618}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -652,27 +652,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6806399452158324182, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 14.255801
+      value: 11.490927
       objectReference: {fileID: 0}
     - target: {fileID: -6806399452158324182, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0
+      value: -1.8007635
       objectReference: {fileID: 0}
     - target: {fileID: -6806399452158324182, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_ConnectedRigidBody
       value: 
       objectReference: {fileID: 894267296}
+    - target: {fileID: 536204558690447248, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 536204560133434261, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 536204560133434261, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.09
+      value: 16.28
       objectReference: {fileID: 0}
     - target: {fileID: 536204560133434261, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 536204560133434261, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -709,6 +713,22 @@ PrefabInstance:
     - target: {fileID: 536204560133434262, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_Name
       value: Train (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Size.x
+      value: 29.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Size.y
+      value: 6.694883
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b92badc8b067bd4da5cb64f188f0e37, type: 3}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 536204560133434287, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_Size.x
@@ -751,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   train: {fileID: 536204560133434262, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
-  pos: 29
+  pos: 30.21
   previous: {fileID: 894267293}
   hinge: {fileID: 0}
 --- !u!61 &1546915696
@@ -811,7 +831,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1931599255
 Transform:
   m_ObjectHideFlags: 0
@@ -898,6 +918,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -2
       objectReference: {fileID: 0}
+    - target: {fileID: 536204558690447248, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204558690447253, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b92badc8b067bd4da5cb64f188f0e37, type: 3}
     - target: {fileID: 536204560133434261, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -945,6 +973,22 @@ PrefabInstance:
     - target: {fileID: 536204560133434262, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_Name
       value: Train
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Size.x
+      value: 29.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Size.y
+      value: 6.694883
+      objectReference: {fileID: 0}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6b92badc8b067bd4da5cb64f188f0e37, type: 3}
+    - target: {fileID: 536204560133434283, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 536204560133434287, guid: 340dbbfce899f34449e5cecf891c3c9c, type: 3}
       propertyPath: m_Size.x
