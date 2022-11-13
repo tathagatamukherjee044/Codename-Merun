@@ -20,11 +20,6 @@ public class StraightenerView : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("TRAIN"))
-        {
-            rigidbody2D  = collision.GetComponent<Rigidbody2D>();
-            rigidbody2D.constraints = RigidbodyConstraints2D.None;
-
-        }
+       
     }
 }

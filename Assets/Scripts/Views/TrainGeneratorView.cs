@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class TrainGeneratorView : MonoBehaviour
 {
-    public GameObject train;
+    public GameObject[] train;
     //public float pos = 7.5f;
     public GameObject previous;
     public HingeJoint2D hinge;
     public bool isEnterEnabled = false;
+    public float nextPos = 32.79f;
+    private int maxTrains;
     // Start is called before the first frame update
     void Start()
     {
         //Instantiate(train,new Vector3 (pos, 1, 0), Quaternion.identity);
+        float nextPos = train[0].GetComponent<TrainModel>().trainLength;
+        GameObject train1 = Instantiate(train[0], new Vector3(1 + nextPos, 1.7f, 0), Quaternion.identity);
+        hinge = train1.gameObject.GetComponent<HingeJoint2D>();
+        hinge.enabled = true;
+        hinge.connectedBody = previous.GetComponent<Rigidbody2D>();
+        previous = train1.gameObject;
+        GameObject train2 =  Instantiate(train[0], new Vector3(1 + nextPos*2, 1.7f, 0), Quaternion.identity);
+        hinge = train2.gameObject.GetComponent<HingeJoint2D>();
+        hinge.enabled = true;
+        hinge.connectedBody = previous.GetComponent<Rigidbody2D>();
+        previous = train2.gameObject;
+
     }
 
     // Update is called once per frame
@@ -30,7 +44,8 @@ public class TrainGeneratorView : MonoBehaviour
             Debug.Log("train has left");
 
             float pos = collision.gameObject.transform.position.x;
-            Instantiate(train, new Vector3(pos + 17.66f, 1.23f, 0), Quaternion.identity);
+            int temp = Random.Range(0, maxTrains);
+            Instantiate(train[temp], new Vector3(pos + nextPos, 1.7f, 0), Quaternion.identity);
         }
             
     }
