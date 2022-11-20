@@ -7,7 +7,7 @@ public class PlayerView : MonoBehaviour
     [SerializeField] private float gravity;
     [SerializeField] private float jumpVelocity = 2.0f;
     [SerializeField] private float moveVelocity = 10f;
-    [SerializeField] private GameObject uiController;
+    [SerializeField] UIController uiController;
     //[SerializeField] private Rigidbody2D rigidbody2D;
     [SerializeField] private Vector2 velocity;
     [SerializeField] private float groundheight;
@@ -22,6 +22,7 @@ public class PlayerView : MonoBehaviour
     {
         //float distToGround = collider.bounds.extents.y;
         boxCollider2D = this.GetComponent<BoxCollider2D>();
+        //Time.timeScale = 0.25f;
 
     }
     // Update is called once per frame
@@ -51,27 +52,28 @@ public class PlayerView : MonoBehaviour
         {
             if (isGrounded)
             {
-                //isGrounded = false;
+                Debug.Log("jumped");
+                isGrounded = false;
                 velocity.y = jumpVelocity;
             }
-            else
+            /*else
             {
                 Debug.Log("dashed");
                 CorrectPosition();
-            }
+            }*/
         }
 
-       /* if (transform.position.x <= -6 && !isBehind)
-        {
-            isBehind = true;
-            Debug.Log("Behind");
-            CorrectPosition();
-        }
+        /* if (transform.position.x <= -6 && !isBehind)
+         {
+             isBehind = true;
+             Debug.Log("Behind");
+             CorrectPosition();
+         }
 
-        if (transform.position.x >= -4 && isBehind)
-        {
-            isBehind = false;
-        }*/
+         if (transform.position.x >= -4 && isBehind)
+         {
+             isBehind = false;
+         }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -80,8 +82,14 @@ public class PlayerView : MonoBehaviour
         {
             Debug.Log("collided player is dead");
             Time.timeScale = 0;
-            uiController.GetComponent<UIController>().deathScreenOn();
+            uiController.deathScreenOn();
 
+        }
+        else if (collision.gameObject.CompareTag("COIN"))
+        {
+            Debug.Log("Points ++");
+            Destroy(collision.gameObject);
+            uiController.pointsIncrement();
         }
     }
 
