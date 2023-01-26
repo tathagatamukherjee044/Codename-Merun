@@ -85,24 +85,7 @@ public class PlayerView : MonoBehaviour
             uiController.deathScreenOn();
 
         }
-        else if (collision.gameObject.CompareTag("COIN"))
-        {
-            Debug.Log("Points ++");
-            Destroy(collision.gameObject);
-            uiController.pointsIncrement();
-        }
     }
-
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("TRAIN"))
-        {
-            //isGrounded = true;
-        }
-    }
-
-
     private void FixedUpdate()
     {
 

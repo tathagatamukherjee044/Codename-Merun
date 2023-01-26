@@ -72,7 +72,7 @@ public class TrainGeneratorView : MonoBehaviour
             float collisionLength = train[testOnlyNumber].gameObject.GetComponent<TrainModel>().trainLength;
             float instantiatePos = nextPos / 2 + collisionLength/2;
             GameObject instatiatedTrain = Instantiate(train[testOnlyNumber], new Vector3(pos + instantiatePos, 1.7f, 0), Quaternion.identity);
-            GameObject instantiatedCoin = Instantiate(coin, new Vector3(pos + instantiatePos, 1.7f, 0), Quaternion.identity);
+            GameObject instantiatedCoin = Instantiate(coin, new Vector3(pos + instantiatePos, 1.8f, 0), Quaternion.identity);
             instantiatedCoin.transform.SetParent(instatiatedTrain.transform);
             nextPos = collisionLength;
         }
